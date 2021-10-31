@@ -1,0 +1,20 @@
+.bodybg{
+   -fx-background-image: url("SA1.jpg");
+   -fx-background-size: 100% 100%;
+}
+.bodybg2{
+   -fx-background-image: url("SA2.jpg");
+   -fx-background-size: 100% 100%;
+}
+.bodybg3{
+  -fx-background-image: url("SA3.jpg");
+  -fx-background-size: 100% 100%;
+}
+.bodybg4{
+  -fx-background-image: url("SA4.jpg");
+  -fx-background-size: 100% 100%;
+}
+.bodybg5{
+  -fx-background-image: url("SA5.jpg");
+  -fx-background-size: 100% 100%;
+}
