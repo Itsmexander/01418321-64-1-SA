@@ -2,17 +2,37 @@ package model;
 
 public class WorkOrder {
     private String workOrder_ID;
+    private String workOrder_Desc;
     private String workOrder_StartDate;
     private String workOrder_FinishDate;
     private String workOrder_Status;
-    private String workOrder_Desc;
+    private String planId;
+    private String worker_ID;
 
-    public WorkOrder(String workOrder_ID, String workOrder_StartDate, String workOrder_FinishDate, String workOrder_Status, String workOrder_Desc) {
+    public WorkOrder(String workOrder_ID, String workOrder_Desc, String workOrder_StartDate, String workOrder_FinishDate, String workOrder_Status, String planId, String worker_ID) {
         this.workOrder_ID = workOrder_ID;
+        this.workOrder_Desc = workOrder_Desc;
         this.workOrder_StartDate = workOrder_StartDate;
         this.workOrder_FinishDate = workOrder_FinishDate;
         this.workOrder_Status = workOrder_Status;
-        this.workOrder_Desc = workOrder_Desc;
+        this.planId = planId;
+        this.worker_ID = worker_ID;
+    }
+
+    public String getPlanId() {
+        return planId;
+    }
+
+    public void setPlanId(String planId) {
+        this.planId = planId;
+    }
+
+    public String getWorker_ID() {
+        return worker_ID;
+    }
+
+    public void setWorker_ID(String worker_ID) {
+        this.worker_ID = worker_ID;
     }
 
     public String getWorkOrder_ID() {

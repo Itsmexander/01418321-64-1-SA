@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="bodybg4" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PlanController">
+   <children>
+      <Label layoutX="366.0" layoutY="14.0" text="Plan">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TableView layoutX="32.0" layoutY="79.0" prefHeight="419.0" prefWidth="400.0" />
+      <Button fx:id="homeBut" layoutX="112.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleHomeBut" text="HOME">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="452.0" layoutY="94.0" text="Plan  ID :" textFill="#00819e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="121.0" text="Plan name :" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="188.0" prefHeight="20.0" prefWidth="81.0" text="Site ID :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="152.0" prefHeight="25.0" prefWidth="129.0" text="Plan description :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="plan_id_label" layoutX="537.0" layoutY="94.0" text="plan id label" textFill="#00819e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="plan_name_label" layoutX="538.0" layoutY="121.0" prefHeight="25.0" prefWidth="122.0" text="plan name label" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="plan_description_label" layoutX="585.0" layoutY="152.0" text="plan description label" textFill="#eb4c4c">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="site_id_label" layoutX="517.0" layoutY="188.0" text="site id label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="234.0" text="เพิ่ม/แก้ไข รายละเอียด">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="addBut" layoutX="459.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleAddBut" text="เพิ่มแปลน">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="editBut" layoutX="571.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleEditBut" text="แก้ไข/บันทึก">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="449.0" layoutY="288.0" text="Plan  ID :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="447.0" layoutY="324.0" text="Plan name :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="358.0" text="Plan description :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="391.0" prefHeight="20.0" prefWidth="81.0" text="Site ID :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="plan_description_textField" layoutX="586.0" layoutY="358.0" />
+      <TextField fx:id="plan_name_textField" layoutX="546.0" layoutY="324.0" />
+      <TextField fx:id="plan_id_textField" layoutX="525.0" layoutY="288.0" />
+      <TextField fx:id="site_id_textField" layoutX="512.0" layoutY="391.0" />
+   </children>
+</AnchorPane>

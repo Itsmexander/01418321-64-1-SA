@@ -1,24 +1,26 @@
-package model;
+package Controller;
 
-public class Worker {
-    private String site_ID;
-    private String workOrder_ID;
+public class worker {
+
     private String worker_ID;
-    private String workType_ID;
-    private String worker_Status;
     private String worker_Name;
     private String worker_Surname;
+    private String workType_ID;
+    private String worker_Status;
     private String worker_telNum;
+    private String site_ID;
+    private String workOrder_ID;
 
-    public Worker(String site_ID, String workOrder_ID, String worker_ID, String workType_ID, String worker_Status, String worker_Name, String worker_Surname, String worker_telNum) {
-        this.site_ID = site_ID;
-        this.workOrder_ID = workOrder_ID;
+    public worker(String worker_ID, String workType_ID, String worker_Status, String worker_Name, String worker_Surname, String worker_telNum , String site_ID, String workOrder_ID) {
+
         this.worker_ID = worker_ID;
-        this.workType_ID = workType_ID;
-        this.worker_Status = worker_Status;
         this.worker_Name = worker_Name;
         this.worker_Surname = worker_Surname;
+        this.workType_ID = workType_ID;
+        this.worker_Status = worker_Status;
         this.worker_telNum = worker_telNum;
+        this.site_ID = site_ID;
+        this.workOrder_ID = workOrder_ID;
     }
 
     public String getSite_ID() {
@@ -83,5 +85,18 @@ public class Worker {
 
     public void setWorker_telNum(String worker_telNum) {
         this.worker_telNum = worker_telNum;
+    }
+    @Override
+    public String toString(){
+        return "Worker{" +
+                "WkID='" + worker_ID + '\'' +
+                ", name=" + worker_Name +
+                ", surname=" + worker_Surname +
+                ", Tel no.='" + worker_telNum + '\'' +
+                ", typeID='" + workType_ID + '\'' +
+                ", Status='" + worker_Status + '\'' +
+                ", SiteID='" + site_ID + '\'' +
+                ", WOID='" + workOrder_ID + '\'' +
+                '}';
     }
 }
