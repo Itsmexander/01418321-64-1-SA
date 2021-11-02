@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,12 +15,12 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <TableView layoutX="14.0" layoutY="79.0" prefHeight="419.0" prefWidth="438.0">
+      <TableView fx:id="site_table" layoutX="14.0" layoutY="79.0" onMouseClicked="#getSelected" prefHeight="419.0" prefWidth="438.0">
          <columns>
-            <TableColumn prefWidth="42.0" text="Site ID" />
-            <TableColumn prefWidth="204.0" text="name" />
-            <TableColumn prefWidth="118.0" text="Foreman name" />
-            <TableColumn prefWidth="73.0" text="Status" />
+            <TableColumn fx:id="site_ID" prefWidth="42.0" text="SiteID" />
+            <TableColumn fx:id="site_Name" prefWidth="204.0" text="SiteName" />
+            <TableColumn fx:id="site_Status" prefWidth="118.0" text="SiteStatus" />
+            <TableColumn fx:id="site_DirName" prefWidth="73.0" text="SiteDirName" />
          </columns></TableView>
       <Button fx:id="homeBut" layoutX="112.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleHomeBut" text="HOME">
          <font>
@@ -43,7 +42,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="474.0" layoutY="152.0" text="Site Foreman name :" textFill="WHITE">
+      <Label layoutX="474.0" layoutY="152.0" text="SiteDirName" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
@@ -58,7 +57,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="site_foreman_name_label" layoutX="619.0" layoutY="152.0" text="site foreman name label" textFill="#035700">
+      <Label fx:id="site_foreman_name_label" layoutX="573.0" layoutY="152.0" text="site foreman name label" textFill="#035700">
          <font>
             <Font size="16.0" />
          </font>
@@ -103,14 +102,14 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="site_status_choiceBox" layoutX="592.0" layoutY="391.0" prefWidth="150.0" />
       <TextField fx:id="site_foreman_name_textField" layoutX="647.0" layoutY="358.0" />
       <TextField fx:id="site_name_textField" layoutX="592.0" layoutY="324.0" />
       <TextField fx:id="site_id_textField" layoutX="572.0" layoutY="288.0" />
-      <Button fx:id="addBut1" layoutX="687.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleAddBut" text="ลบ">
+      <Button fx:id="delBut" layoutX="687.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleDelBut" text="ลบ">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
+      <TextField fx:id="site_status_choiceBox" layoutX="572.0" layoutY="391.0" />
    </children>
 </AnchorPane>

@@ -16,7 +16,7 @@ public class MysqlConnect {
     Connection conn = null;
     public static Connection ConnectDb(){
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/sa_sophonchai_hs","root","");
             JOptionPane.showMessageDialog(null, "Connection Established");
             return conn;
@@ -31,23 +31,24 @@ public class MysqlConnect {
         Connection conn = ConnectDb();
         ObservableList<worker> list = FXCollections.observableArrayList();
         try {
-            PreparedStatement ps = conn.prepareStatement("select * from worker");
+            PreparedStatement ps = conn.prepareStatement("SELECT * from worker");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                    list.add(new worker(rs.getString("worker_ID"),
-                        rs.getString("worker_Name"),
-                        rs.getString("worker_Surname"),
-                        rs.getString("workType_ID"),
-                        rs.getString("worker_Status"),
-                        rs.getString("worker_telNum"),
-                        rs.getString("site_ID"),
-                        rs.getString("workOrder_ID")));
+                    list.add(new worker(rs.getString("WkID"),
+                        rs.getString("WkName"),
+                        rs.getString("WkSurname"),
+                        rs.getString("WkTelNo"),
+                        rs.getString("WkStatus"),
+                        rs.getString("WTID"),
+                        rs.getString("SiteID"),
+                        rs.getString("WOID")));
             }
         } catch (Exception e) {
         }
         return list;
     }
+
 
     public static ObservableList<WorkOrder> getWorkOrderData(){
         Connection conn = ConnectDb();
@@ -57,13 +58,13 @@ public class MysqlConnect {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                list.add(new WorkOrder(rs.getString("workOrder_ID"),
-                        rs.getString("workOrder_Desc"),
-                        rs.getString("workOrder_StartDate"),
-                        rs.getString("workOrder_FinishDate"),
-                        rs.getString("workOrder_Status"),
-                        rs.getString("planId"),
-                        rs.getString("worker_ID")));
+                list.add(new WorkOrder(rs.getString("WOID"),
+                        rs.getString("WODesc"),
+                        rs.getString("WOStDate"),
+                        rs.getString("WOFinDate"),
+                        rs.getString("WOStatus"),
+                        rs.getString("PlanID"),
+                        rs.getString("WkID")));
             }
         } catch (Exception e) {
         }
@@ -74,14 +75,14 @@ public class MysqlConnect {
         Connection conn = ConnectDb();
         ObservableList<Site> list = FXCollections.observableArrayList();
         try {
-            PreparedStatement ps = conn.prepareStatement("select * from site");
+            PreparedStatement ps = conn.prepareStatement("SELECT * from site");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                list.add(new Site(rs.getString("site_ID"),
-                        rs.getString("site_Name"),
-                        rs.getString("site_Status"),
-                        rs.getString("site_DirName")));
+                list.add(new Site(rs.getString("SiteID"),
+                        rs.getString("SiteName"),
+                        rs.getString("SiteStatus"),
+                        rs.getString("SiteDirName")));
             }
         } catch (Exception e) {
         }
@@ -92,14 +93,14 @@ public class MysqlConnect {
         Connection conn = ConnectDb();
         ObservableList<Plan> list = FXCollections.observableArrayList();
         try {
-            PreparedStatement ps = conn.prepareStatement("select * from plan");
+            PreparedStatement ps = conn.prepareStatement("SELECT * from plan");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                list.add(new Plan(rs.getString("planId"),
-                        rs.getString("planName"),
-                        rs.getString("planDesc"),
-                        rs.getString("siteId")));
+                list.add(new Plan(rs.getString("PlanID"),
+                        rs.getString("PlanName"),
+                        rs.getString("PlanDesc"),
+                        rs.getString("SiteId")));
             }
         } catch (Exception e) {
         }

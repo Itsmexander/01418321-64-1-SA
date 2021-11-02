@@ -1,49 +1,47 @@
 package model;
 
 public class Plan {
-    private String planId;
-    private String planName;
-    private String planDesc;
-    private String siteId;
+    private String PlanID;
+    private String PlanName;
+    private String PlanDesc;
+    private String SiteID;
 
-    public Plan(String planId, String planName, String planDesc, String siteId) {
-        this.planId = planId;
-        this.planName = planName;
-        this.planDesc = planDesc;
-        this.siteId = siteId;
+    public Plan(String planID, String planName, String planDesc, String siteID) {
+        PlanID = planID;
+        PlanName = planName;
+        PlanDesc = planDesc;
+        SiteID = siteID;
     }
 
-    public String getPlanId() {
-        return planId;
+    public String getPlanID() {
+        return PlanID;
+    }
+
+    public void setPlanID(String planID) {
+        PlanID = planID;
     }
 
     public String getPlanName() {
-        return planName;
-    }
-
-    public String getPlanDesc() {
-        return planDesc;
-    }
-
-    public String getSiteId() {
-        return siteId;
-    }
-
-    public void setPlanId(String planId) {
-        this.planId = planId;
+        return PlanName;
     }
 
     public void setPlanName(String planName) {
-        this.planName = planName;
+        PlanName = planName;
+    }
+
+    public String getPlanDesc() {
+        return PlanDesc;
     }
 
     public void setPlanDesc(String planDesc) {
-        this.planDesc = planDesc;
+        PlanDesc = planDesc;
     }
 
-    public void setSiteId(String siteId) {
-        this.siteId = siteId;
+    public String getSiteID() {
+        return SiteID;
     }
 
-
+    public void setSiteID(String siteID) {
+        SiteID = siteID;
+    }
 }

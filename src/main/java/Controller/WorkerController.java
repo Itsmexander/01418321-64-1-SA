@@ -7,7 +7,11 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -144,12 +148,12 @@ public class WorkerController<Worker> implements Initializable {
 
     }
 
-    public void Delete(){
+    public void handleDelBut(){
         conn = MysqlConnect.ConnectDb();
         String sql = "delete from worker where WkID = ?";
         try {
             pst = conn.prepareStatement(sql);
-            pst.setString(1, wo_id_textField.getText());
+            pst.setString(1, worker_id_textField.getText());
             pst.execute();
             JOptionPane.showMessageDialog(null, "Delete");
 //            UpdateTable();
@@ -160,7 +164,7 @@ public class WorkerController<Worker> implements Initializable {
     }
 
 
-    public void UpdateTable(){
+    public void handleEditBut(){
         c_worker_ID.setCellValueFactory(new PropertyValueFactory<>("WkID"));
         c_worker_Name.setCellValueFactory(new PropertyValueFactory<>("name"));
         c_worker_Surname.setCellValueFactory(new PropertyValueFactory<>("surname"));
@@ -175,22 +179,22 @@ public class WorkerController<Worker> implements Initializable {
         worker_tab.setItems(listM);
     }
 
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         c_worker_ID.setCellValueFactory(new PropertyValueFactory<worker, String>("WkID"));
-        c_worker_Name.setCellValueFactory(new PropertyValueFactory<worker, String>("name"));
-        c_worker_Surname.setCellValueFactory(new PropertyValueFactory<worker, String>("surname"));
-        c_worker_telNum.setCellValueFactory(new PropertyValueFactory<worker, String>("Tel no."));
-        c_workType_ID.setCellValueFactory(new PropertyValueFactory<worker, String>("SiteID"));
-        c_worker_Status.setCellValueFactory(new PropertyValueFactory<worker, String>("Status"));
+        c_worker_Name.setCellValueFactory(new PropertyValueFactory<worker, String>("WkName"));
+        c_worker_Surname.setCellValueFactory(new PropertyValueFactory<worker, String>("WkSurname"));
+        c_worker_telNum.setCellValueFactory(new PropertyValueFactory<worker, String>("WkTelNo"));
+        c_workType_ID.setCellValueFactory(new PropertyValueFactory<worker, String>("WkStatus"));
+        c_worker_Status.setCellValueFactory(new PropertyValueFactory<worker, String>("WTID"));
         c_site_ID.setCellValueFactory(new PropertyValueFactory<worker, String>("SiteID"));
         c_workOrder_ID.setCellValueFactory(new PropertyValueFactory<worker, String>("WOID"));
 
-
         listM = MysqlConnect.getWorkerData();
         worker_tab.setItems(listM);
-        UpdateTable();
-        // Code Source in description
+
     }
 
 

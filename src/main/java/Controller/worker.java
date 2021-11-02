@@ -2,101 +2,101 @@ package Controller;
 
 public class worker {
 
-    private String worker_ID;
-    private String worker_Name;
-    private String worker_Surname;
-    private String workType_ID;
-    private String worker_Status;
-    private String worker_telNum;
-    private String site_ID;
-    private String workOrder_ID;
+    private String WkID;
+    private String WkName;
+    private String WkSurname;
+    private String WkTelNo;
+    private String WkStatus;
+    private String WTID;
+    private String SiteID;
+    private String WOID;
 
-    public worker(String worker_ID, String workType_ID, String worker_Status, String worker_Name, String worker_Surname, String worker_telNum , String site_ID, String workOrder_ID) {
-
-        this.worker_ID = worker_ID;
-        this.worker_Name = worker_Name;
-        this.worker_Surname = worker_Surname;
-        this.workType_ID = workType_ID;
-        this.worker_Status = worker_Status;
-        this.worker_telNum = worker_telNum;
-        this.site_ID = site_ID;
-        this.workOrder_ID = workOrder_ID;
+    public worker(String wkID, String wkName, String wkSurname, String wkTelNo, String wkStatus, String WTID, String siteID, String WOID) {
+        WkID = wkID;
+        WkName = wkName;
+        WkSurname = wkSurname;
+        WkTelNo = wkTelNo;
+        WkStatus = wkStatus;
+        this.WTID = WTID;
+        SiteID = siteID;
+        this.WOID = WOID;
     }
 
-    public String getSite_ID() {
-        return site_ID;
+    public String getWkID() {
+        return WkID;
     }
 
-    public void setSite_ID(String site_ID) {
-        this.site_ID = site_ID;
+    public void setWkID(String wkID) {
+        WkID = wkID;
     }
 
-    public String getWorkOrder_ID() {
-        return workOrder_ID;
+    public String getWkName() {
+        return WkName;
     }
 
-    public void setWorkOrder_ID(String workOrder_ID) {
-        this.workOrder_ID = workOrder_ID;
+    public void setWkName(String wkName) {
+        WkName = wkName;
     }
 
-    public String getWorker_ID() {
-        return worker_ID;
+    public String getWkSurname() {
+        return WkSurname;
     }
 
-    public void setWorker_ID(String worker_ID) {
-        this.worker_ID = worker_ID;
+    public void setWkSurname(String wkSurname) {
+        WkSurname = wkSurname;
     }
 
-    public String getWorkType_ID() {
-        return workType_ID;
+    public String getWkTelNo() {
+        return WkTelNo;
     }
 
-    public void setWorkType_ID(String workType_ID) {
-        this.workType_ID = workType_ID;
+    public void setWkTelNo(String wkTelNo) {
+        WkTelNo = wkTelNo;
     }
 
-    public String getWorker_Status() {
-        return worker_Status;
+    public String getWkStatus() {
+        return WkStatus;
     }
 
-    public void setWorker_Status(String worker_Status) {
-        this.worker_Status = worker_Status;
+    public void setWkStatus(String wkStatus) {
+        WkStatus = wkStatus;
     }
 
-    public String getWorker_Name() {
-        return worker_Name;
+    public String getWTID() {
+        return WTID;
     }
 
-    public void setWorker_Name(String worker_Name) {
-        this.worker_Name = worker_Name;
+    public void setWTID(String WTID) {
+        this.WTID = WTID;
     }
 
-    public String getWorker_Surname() {
-        return worker_Surname;
+    public String getSiteID() {
+        return SiteID;
     }
 
-    public void setWorker_Surname(String worker_Surname) {
-        this.worker_Surname = worker_Surname;
+    public void setSiteID(String siteID) {
+        SiteID = siteID;
     }
 
-    public String getWorker_telNum() {
-        return worker_telNum;
+    public String getWOID() {
+        return WOID;
     }
 
-    public void setWorker_telNum(String worker_telNum) {
-        this.worker_telNum = worker_telNum;
+    public void setWOID(String WOID) {
+        this.WOID = WOID;
     }
+
     @Override
     public String toString(){
         return "Worker{" +
-                "WkID='" + worker_ID + '\'' +
-                ", name=" + worker_Name +
-                ", surname=" + worker_Surname +
-                ", Tel no.='" + worker_telNum + '\'' +
-                ", typeID='" + workType_ID + '\'' +
-                ", Status='" + worker_Status + '\'' +
-                ", SiteID='" + site_ID + '\'' +
-                ", WOID='" + workOrder_ID + '\'' +
+                "WkID='" + WkID + '\'' +
+                ", name=" + WkName +
+                ", surname=" + WkSurname +
+                ", Tel no.='" + WkTelNo + '\'' +
+                ", typeID='" + WkID + '\'' +
+                ", Status='" + WkStatus + '\'' +
+                ", SiteID='" + SiteID + '\'' +
+                ", WOID='" + WOID + '\'' +
                 '}';
     }
 }

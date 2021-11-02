@@ -1,79 +1,77 @@
 package model;
 
 public class WorkOrder {
-    private String workOrder_ID;
-    private String workOrder_Desc;
-    private String workOrder_StartDate;
-    private String workOrder_FinishDate;
-    private String workOrder_Status;
-    private String planId;
-    private String worker_ID;
+    private String WOID;
+    private String WODesc;
+    private String WOStDate;
+    private String WOFinDate;
+    private String WOStatus;
+    private String PlanID;
+    private String WkID;
 
-    public WorkOrder(String workOrder_ID, String workOrder_Desc, String workOrder_StartDate, String workOrder_FinishDate, String workOrder_Status, String planId, String worker_ID) {
-        this.workOrder_ID = workOrder_ID;
-        this.workOrder_Desc = workOrder_Desc;
-        this.workOrder_StartDate = workOrder_StartDate;
-        this.workOrder_FinishDate = workOrder_FinishDate;
-        this.workOrder_Status = workOrder_Status;
-        this.planId = planId;
-        this.worker_ID = worker_ID;
+    public WorkOrder(String WOID, String WODesc, String WOStDate, String WOFinDate, String WOStatus, String planID, String wkID) {
+        this.WOID = WOID;
+        this.WODesc = WODesc;
+        this.WOStDate = WOStDate;
+        this.WOFinDate = WOFinDate;
+        this.WOStatus = WOStatus;
+        PlanID = planID;
+        WkID = wkID;
     }
 
-    public String getPlanId() {
-        return planId;
+    public String getWOID() {
+        return WOID;
     }
 
-    public void setPlanId(String planId) {
-        this.planId = planId;
+    public void setWOID(String WOID) {
+        this.WOID = WOID;
     }
 
-    public String getWorker_ID() {
-        return worker_ID;
+    public String getWODesc() {
+        return WODesc;
     }
 
-    public void setWorker_ID(String worker_ID) {
-        this.worker_ID = worker_ID;
+    public void setWODesc(String WODesc) {
+        this.WODesc = WODesc;
     }
 
-    public String getWorkOrder_ID() {
-        return workOrder_ID;
+    public String getWOStDate() {
+        return WOStDate;
     }
 
-    public void setWorkOrder_ID(String workOrder_ID) {
-        this.workOrder_ID = workOrder_ID;
+    public void setWOStDate(String WOStDate) {
+        this.WOStDate = WOStDate;
     }
 
-    public String getWorkOrder_StartDate() {
-        return workOrder_StartDate;
+    public String getWOFinDate() {
+        return WOFinDate;
     }
 
-    public void setWorkOrder_StartDate(String workOrder_StartDate) {
-        this.workOrder_StartDate = workOrder_StartDate;
+    public void setWOFinDate(String WOFinDate) {
+        this.WOFinDate = WOFinDate;
     }
 
-    public String getWorkOrder_FinishDate() {
-        return workOrder_FinishDate;
+    public String getWOStatus() {
+        return WOStatus;
     }
 
-    public void setWorkOrder_FinishDate(String workOrder_FinishDate) {
-        this.workOrder_FinishDate = workOrder_FinishDate;
+    public void setWOStatus(String WOStatus) {
+        this.WOStatus = WOStatus;
     }
 
-    public String getWorkOrder_Status() {
-        return workOrder_Status;
+    public String getPlanID() {
+        return PlanID;
     }
 
-    public void setWorkOrder_Status(String workOrder_Status) {
-        this.workOrder_Status = workOrder_Status;
+    public void setPlanID(String planID) {
+        PlanID = planID;
     }
 
-    public String getWorkOrder_Desc() {
-        return workOrder_Desc;
+    public String getWkID() {
+        return WkID;
     }
 
-    public void setWorkOrder_Desc(String workOrder_Desc) {
-        this.workOrder_Desc = workOrder_Desc;
+    public void setWkID(String wkID) {
+        WkID = wkID;
     }
-
-
 }
